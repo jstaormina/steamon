@@ -1,0 +1,17 @@
+{
+    "name": "steamon",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "packages/*"
+        ]
+    },
+    "scripts": {
+        "start:frontend": "yarn workspace frontend start",
+        "start:backend": "yarn workspace backend start",
+        "dev": "dotenv -- concurrently \"yarn workspace frontend start\" \"yarn workspace backend start\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
