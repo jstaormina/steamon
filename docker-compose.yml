@@ -1,6 +1,6 @@
 services:
   steamon:
-    image: steamon:latest
+    image: ghcr.io/jstaormina/steamon:main
     ports:
       - "3000:3000"
     env_file:

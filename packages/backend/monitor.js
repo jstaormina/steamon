@@ -200,6 +200,10 @@ app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.listen(port, () => {
-  console.log(`Steam monitor API running at http://localhost:${port}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Steam monitor API running at http://localhost:${port}`);
+  });
+}
+
+module.exports = app;

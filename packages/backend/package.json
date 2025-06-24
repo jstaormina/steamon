@@ -4,7 +4,7 @@
   "description": "webpage and api for monitoring the status of steam on windows pve vm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node monitor.js"
   },
   "author": "",
@@ -13,5 +13,9 @@
     "axios": "^1.10.0",
     "express": "^5.1.0",
     "ssh2": "^1.16.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.2",
+    "supertest": "^7.1.1"
   }
 }
