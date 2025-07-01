@@ -12,6 +12,7 @@
         "dev": "dotenv -- concurrently \"yarn workspace frontend start\" \"yarn workspace backend start\""
     },
     "devDependencies": {
-        "concurrently": "^8.2.2"
+        "concurrently": "^8.2.2",
+        "dotenv-cli": "^8.0.0"
     }
 }

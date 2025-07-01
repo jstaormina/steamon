@@ -5,6 +5,7 @@ const app = express();
 const path = require('path');
 const port = 3000;
 const https = require('https');
+const net = require('net');
 
 // Config
 const sshConfig = {
@@ -114,6 +115,41 @@ app.get('/api/steam-status', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: 'Failed to check Steam process', detail: err.toString() });
   }
+});
+
+// Endpoint 5: Check Steam Link status (port 27036 open)
+app.get('/api/steam-link-status', async (req, res) => {
+  const host = sshConfig.host;
+  const port = 27036;
+  const socket = new net.Socket();
+  let isOpen = false;
+  let responded = false;
+
+  socket.setTimeout(2000);
+
+  socket.on('connect', () => {
+    isOpen = true;
+    responded = true;
+    socket.destroy();
+    res.json({ steamLinkPortOpen: true });
+  });
+
+  socket.on('timeout', () => {
+    if (!responded) {
+      responded = true;
+      socket.destroy();
+      res.json({ steamLinkPortOpen: false });
+    }
+  });
+
+  socket.on('error', () => {
+    if (!responded) {
+      responded = true;
+      res.json({ steamLinkPortOpen: false });
+    }
+  });
+
+  socket.connect(port, host);
 });
 
 async function callPveApi(method, url, body) {

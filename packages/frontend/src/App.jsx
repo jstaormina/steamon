@@ -27,6 +27,7 @@ export default function App() {
     win: null,
     steam: null,
     driver: null,
+    steamLink: null,
   });
   const [loading, setLoading] = useState(true);
   const [creationStatus, setCreationStatus] = useState('idle');
@@ -34,17 +35,19 @@ export default function App() {
   const fetchStatuses = async () => {
     setLoading(true);
     try {
-      const [vm, win, steam, driver] = await Promise.all([
+      const [vm, win, steam, driver, steamLink] = await Promise.all([
         axios.get('/api/vm-status'),
         axios.get('/api/windows-status'),
         axios.get('/api/steam-status'),
         axios.get('/api/display-driver-status'),
+        axios.get('/api/steam-link-status'),
       ]);
       setStatuses({
         vm: vm.data.status === 'running',
         win: win.data.reachable,
         steam: steam.data.steamRunning,
         driver: driver.data.displayDriverLoaded,
+        steamLink: steamLink.data.steamLinkPortOpen,
       });
     } catch (err) {
       console.error(err);
@@ -53,6 +56,7 @@ export default function App() {
         win: false,
         steam: false,
         driver: false,
+        steamLink: false,
       });
     }
     setLoading(false);
@@ -82,11 +86,12 @@ export default function App() {
     <div className="min-h-screen bg-gray-100 p-6 flex flex-col items-center">
       <h1 className="text-3xl font-bold mb-8">Steam VM Monitor</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 w-full max-w-6xl">
         <StatusCard title="VM Running" value={statuses.vm} loading={loading} />
         <StatusCard title="Windows Online" value={statuses.win} loading={loading} />
         <StatusCard title="Steam Running" value={statuses.steam} loading={loading} />
         <StatusCard title="Display Driver Loaded" value={statuses.driver} loading={loading} />
+        <StatusCard title="Steam Link Port Open" value={statuses.steamLink} loading={loading} />
       </div>
 
       <button
