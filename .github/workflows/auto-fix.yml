@@ -4,6 +4,7 @@ on:
   workflow_run:
     workflows: ["docker-image", "Create and publish a Docker image"]
     types: [completed]
+
 jobs:
   analyze-and-fix:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
@@ -12,6 +13,7 @@ jobs:
       contents: write
       pull-requests: write
       actions: read
+      models: read  # Add this permission for GitHub Models API
     steps:
       - uses: actions/checkout@v4
       
@@ -24,56 +26,39 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Debug: Check if log file exists and has content
-          echo "Log file size: $(wc -l < failure.log) lines"
+          # Truncate log to avoid token limits
+          tail -n 2000 failure.log > failure-truncated.log
           
-          # Create properly formatted JSON payload using jq
+          # Create JSON payload
           jq -n \
-            --rawfile log failure.log \
+            --rawfile log failure-truncated.log \
             '{
               "messages": [
                 {
                   "role": "system",
-                  "content": "You are a helpful assistant that analyzes CI/CD failures and suggests fixes."
+                  "content": "You are a helpful assistant that analyzes CI/CD failures."
                 },
                 {
                   "role": "user",
-                  "content": ("Analyze this GitHub Actions workflow failure and suggest specific fixes:\n\n" + $log)
+                  "content": ("Fix this workflow failure:\n\n" + $log)
                 }
               ],
-              "model": "gpt-4o"
+              "model": "gpt-4o",
+              "max_tokens": 2000
             }' > request.json
           
-          # Debug: Show first few lines of the request
-          echo "Request payload (first 500 chars):"
-          head -c 500 request.json
-          echo -e "\n..."
-    
           # Call API
-          curl -v https://models.inference.ai.azure.com/chat/completions \
+          curl https://models.inference.ai.azure.com/chat/completions \
             -H "Content-Type: application/json" \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
-            -d @request.json > ai-response.json 2>&1
+            -d @request.json -o ai-response.json
           
-          # Display response
-          echo "API Response:"
-          cat ai-response.json | jq . || cat ai-response.json
+          # Show response
+          jq . ai-response.json || cat ai-response.json
       
-      - name: Apply fixes (manual step - add your logic)
-        run: |
-          echo "TODO: Parse ai-response.json and apply suggested changes"
-          # You'd need to implement logic to parse the AI response
-          # and make actual file changes
-      
-      - name: Create PR with GitHub API
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/${{ github.repository }}/pulls \
-            -d '{
-              "title": "Auto-fix: Repair failing workflow",
-              "body": "Automated fix for workflow failure",
-              "head": "auto-fix/${{ github.run_number }}",
-              "base": "main"
-            }'
+      - name: Create PR with fix
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "Auto-fix: Repair failing workflow"
+          body: "Automated fix based on AI analysis"
+          branch: auto-fix/${{ github.run_number }}
