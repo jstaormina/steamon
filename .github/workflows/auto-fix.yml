@@ -2,7 +2,7 @@ name: AI Auto-Fix on Failure
 
 on:
   workflow_run:
-    workflows: ["CI"]
+    workflows: ["docker-image", "Create and publish a Docker image"]
     types: [completed]
 jobs:
   analyze-and-fix:
