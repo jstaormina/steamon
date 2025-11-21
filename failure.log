@@ -1,0 +1,315 @@
+build-and-push-image	Build and push Docker image	﻿2025-11-21T21:48:34.0569712Z ##[group]Run docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0570160Z with:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0570326Z   context: .
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0570488Z   push: true
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0570668Z   tags: ghcr.io/jstaormina/steamon:main
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0572226Z   labels: org.opencontainers.image.title=steamon
+build-and-push-image	Build and push Docker image	org.opencontainers.image.description=
+build-and-push-image	Build and push Docker image	org.opencontainers.image.url=https://github.com/jstaormina/steamon
+build-and-push-image	Build and push Docker image	org.opencontainers.image.source=https://github.com/jstaormina/steamon
+build-and-push-image	Build and push Docker image	org.opencontainers.image.version=main
+build-and-push-image	Build and push Docker image	org.opencontainers.image.created=2025-11-21T21:48:34.033Z
+build-and-push-image	Build and push Docker image	org.opencontainers.image.revision=e93e020377a909e461123aefa35f7baa7b41afdc
+build-and-push-image	Build and push Docker image	org.opencontainers.image.licenses=
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0573845Z   load: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0574017Z   no-cache: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0574186Z   pull: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0574500Z   github-token: ***
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0574681Z env:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0574833Z   REGISTRY: ghcr.io
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0575021Z   IMAGE_NAME: jstaormina/steamon
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0575288Z   DOCKER_METADATA_OUTPUT_VERSION: main
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0575595Z   DOCKER_METADATA_OUTPUT_TAGS: ghcr.io/jstaormina/steamon:main
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0577259Z   DOCKER_METADATA_OUTPUT_LABELS: org.opencontainers.image.title=steamon
+build-and-push-image	Build and push Docker image	org.opencontainers.image.description=
+build-and-push-image	Build and push Docker image	org.opencontainers.image.url=https://github.com/jstaormina/steamon
+build-and-push-image	Build and push Docker image	org.opencontainers.image.source=https://github.com/jstaormina/steamon
+build-and-push-image	Build and push Docker image	org.opencontainers.image.version=main
+build-and-push-image	Build and push Docker image	org.opencontainers.image.created=2025-11-21T21:48:34.033Z
+build-and-push-image	Build and push Docker image	org.opencontainers.image.revision=e93e020377a909e461123aefa35f7baa7b41afdc
+build-and-push-image	Build and push Docker image	org.opencontainers.image.licenses=
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0580871Z   DOCKER_METADATA_OUTPUT_JSON: {"tags":["ghcr.io/jstaormina/steamon:main"],"labels":{"org.opencontainers.image.title":"steamon","org.opencontainers.image.description":"","org.opencontainers.image.url":"https://github.com/jstaormina/steamon","org.opencontainers.image.source":"https://github.com/jstaormina/steamon","org.opencontainers.image.version":"main","org.opencontainers.image.created":"2025-11-21T21:48:34.033Z","org.opencontainers.image.revision":"e93e020377a909e461123aefa35f7baa7b41afdc","org.opencontainers.image.licenses":""}}
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0582849Z   DOCKER_METADATA_OUTPUT_BAKE_FILE: /tmp/docker-actions-toolkit-xOAi4U/docker-metadata-action-bake.json
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.0583289Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1558991Z ##[group]GitHub Actions runtime token ACs
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1579137Z refs/heads/main: read/write
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1580609Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1581211Z ##[group]Docker info
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1617849Z [command]/usr/bin/docker version
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1826971Z Client: Docker Engine - Community
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1830271Z  Version:           28.0.4
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1830764Z  API version:       1.48
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1831026Z  Go version:        go1.23.7
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1831268Z  Git commit:        b8034c0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1831527Z  Built:             Tue Mar 25 15:07:16 2025
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1831813Z  OS/Arch:           linux/amd64
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1832037Z  Context:           default
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1832163Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1832269Z Server: Docker Engine - Community
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1832489Z  Engine:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1832663Z   Version:          28.0.4
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1832913Z   API version:      1.48 (minimum version 1.24)
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1833197Z   Go version:       go1.23.7
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1833409Z   Git commit:       6430e49
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1833658Z   Built:            Tue Mar 25 15:07:16 2025
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1833903Z   OS/Arch:          linux/amd64
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1834125Z   Experimental:     false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1834329Z  containerd:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1834513Z   Version:          v2.1.5
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1834792Z   GitCommit:        fcd43222d6b07379a4be9786bda52438f0dd16a1
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1835074Z  runc:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1835237Z   Version:          1.3.3
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1835455Z   GitCommit:        v1.3.3-0-gd842d771
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1836089Z  docker-init:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1836275Z   Version:          0.19.0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1836545Z   GitCommit:        de40ad0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:34.1876839Z [command]/usr/bin/docker info
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7576475Z Client: Docker Engine - Community
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7579896Z  Version:    28.0.4
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7580424Z  Context:    default
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7580769Z  Debug Mode: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7581046Z  Plugins:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7581340Z   buildx: Docker Buildx (Docker Inc.)
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7581774Z     Version:  v0.29.1
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7582176Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7582688Z   compose: Docker Compose (Docker Inc.)
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7583076Z     Version:  v2.38.2
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7583465Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7583825Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7583925Z Server:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7584178Z  Containers: 0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7584495Z   Running: 0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7584798Z   Paused: 0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7585053Z   Stopped: 0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7585313Z  Images: 0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7585602Z  Server Version: 28.0.4
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7585959Z  Storage Driver: overlay2
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7586339Z   Backing Filesystem: extfs
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7586701Z   Supports d_type: true
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7587055Z   Using metacopy: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7587393Z   Native Overlay Diff: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7588443Z   userxattr: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7589149Z  Logging Driver: json-file
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7589477Z  Cgroup Driver: systemd
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7589801Z  Cgroup Version: 2
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7590098Z  Plugins:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7590506Z   Volume: local
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7590920Z   Network: bridge host ipvlan macvlan null overlay
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7591710Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7592380Z  Swarm: inactive
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7592782Z  Runtimes: io.containerd.runc.v2 runc
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7593205Z  Default Runtime: runc
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7593512Z  Init Binary: docker-init
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7593930Z  containerd version: fcd43222d6b07379a4be9786bda52438f0dd16a1
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7594450Z  runc version: v1.3.3-0-gd842d771
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7594821Z  init version: de40ad0
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7595100Z  Security Options:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7595385Z   apparmor
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7595639Z   seccomp
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7595896Z    Profile: builtin
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7596163Z   cgroupns
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7596412Z  Kernel Version: 6.11.0-1018-azure
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7596767Z  Operating System: Ubuntu 24.04.3 LTS
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7597135Z  OSType: linux
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7597411Z  Architecture: x86_64
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7597918Z  CPUs: 4
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7598193Z  Total Memory: 15.62GiB
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7598512Z  Name: runnervmg1sw1
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7598859Z  ID: 25309008-d3b6-4795-9b53-5704e2dd5a06
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7599284Z  Docker Root Dir: /var/lib/docker
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7599680Z  Debug Mode: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7599988Z  Username: githubactions
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7600305Z  Experimental: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7600598Z  Insecure Registries:
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7605251Z   ::1/128
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7605529Z   127.0.0.0/8
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7605783Z  Live Restore Enabled: false
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7606006Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.7613646Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.8520111Z ##[group]Buildx version
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.8544945Z [command]/usr/bin/docker buildx version
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.9180376Z github.com/docker/buildx v0.29.1 a32761aeb3debd39be1eca514af3693af0db334b
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:36.9214364Z ##[endgroup]
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.1805395Z [command]/usr/bin/docker buildx build --iidfile /tmp/docker-actions-toolkit-GOACOO/iidfile --label org.opencontainers.image.title=steamon --label org.opencontainers.image.description= --label org.opencontainers.image.url=https://github.com/jstaormina/steamon --label org.opencontainers.image.source=https://github.com/jstaormina/steamon --label org.opencontainers.image.version=main --label org.opencontainers.image.created=2025-11-21T21:48:34.033Z --label org.opencontainers.image.revision=e93e020377a909e461123aefa35f7baa7b41afdc --label org.opencontainers.image.licenses= --tag ghcr.io/jstaormina/steamon:main --metadata-file /tmp/docker-actions-toolkit-GOACOO/metadata-file --push .
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5604126Z #0 building with "default" instance using docker driver
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5604628Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5604845Z #1 [internal] load build definition from Dockerfile
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5605402Z #1 transferring dockerfile: 834B done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5605812Z #1 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5605983Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5606255Z #2 [auth] docker/dockerfile:pull token for registry-1.docker.io
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5606800Z #2 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5606996Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.5607396Z #3 resolve image config for docker-image://docker.io/docker/dockerfile:1
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.8190754Z #3 DONE 0.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9258117Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9259319Z #4 docker-image://docker.io/docker/dockerfile:1@sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9260968Z #4 resolve docker.io/docker/dockerfile:1@sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9261992Z #4 sha256:62b0eac4b38b65f257ba2525a1bc87978b5e339d6133b5daef1bde40fe7aa10f 850B / 850B done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9262748Z #4 sha256:6742480c08d7878bbb82a5f5b55d7cb17c5dea60d2068cb2bd37994f3a5c680e 1.33kB / 1.33kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9263804Z #4 sha256:77246a01651da592b7bae79e0e20ed3b4f2e4c00a1b54b7c921c91ae3fa9ef07 5.24MB / 13.57MB 0.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:37.9264515Z #4 sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6 8.40kB / 8.40kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.0889076Z #4 sha256:77246a01651da592b7bae79e0e20ed3b4f2e4c00a1b54b7c921c91ae3fa9ef07 11.53MB / 13.57MB 0.2s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.0892346Z #4 extracting sha256:77246a01651da592b7bae79e0e20ed3b4f2e4c00a1b54b7c921c91ae3fa9ef07
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.1889489Z #4 sha256:77246a01651da592b7bae79e0e20ed3b4f2e4c00a1b54b7c921c91ae3fa9ef07 13.57MB / 13.57MB 0.3s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.3403306Z #4 extracting sha256:77246a01651da592b7bae79e0e20ed3b4f2e4c00a1b54b7c921c91ae3fa9ef07 0.1s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.3403865Z #4 DONE 0.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.3403978Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.3404130Z #5 [auth] library/node:pull token for registry-1.docker.io
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.4908316Z #5 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.4908610Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.4908840Z #6 [internal] load metadata for docker.io/library/node:20
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.6333992Z #6 DONE 0.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.6334267Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.6334541Z #7 [internal] load metadata for docker.io/library/node:20-slim
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.8035880Z #7 DONE 0.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.8036179Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.8036329Z #8 [internal] load .dockerignore
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.8036756Z #8 transferring context: 2B done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:38.8037165Z #8 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2600959Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2601487Z #9 [internal] load build context
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2602068Z #9 transferring context: 215.24kB 0.0s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2602586Z #9 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2602833Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2603612Z #10 [builder 1/7] FROM docker.io/library/node:20@sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2604800Z #10 resolve docker.io/library/node:20@sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2605774Z #10 sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6 6.41kB / 6.41kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2606642Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 0B / 48.48MB 0.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2607706Z #10 sha256:8cdff261ed5cee6fd4e729e68c2831a0abc6c7c017569ab45dfd2240bcc3712d 2.10MB / 24.03MB 0.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2608598Z #10 sha256:4bd021da81659dd1da4a96539550966c493033f5386961ac1201e5de1daca909 2.49kB / 2.49kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2609676Z #10 sha256:f3270d8f56f5791efea98b1f6284d814137913547f172531544493cb1acab49e 6.75kB / 6.75kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.2610253Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 0B / 64.40MB 0.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.3608052Z #10 sha256:8cdff261ed5cee6fd4e729e68c2831a0abc6c7c017569ab45dfd2240bcc3712d 9.44MB / 24.03MB 0.2s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.5596802Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 6.29MB / 48.48MB 0.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.5597949Z #10 sha256:8cdff261ed5cee6fd4e729e68c2831a0abc6c7c017569ab45dfd2240bcc3712d 20.97MB / 24.03MB 0.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.6598511Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 9.44MB / 48.48MB 0.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.6600134Z #10 sha256:8cdff261ed5cee6fd4e729e68c2831a0abc6c7c017569ab45dfd2240bcc3712d 24.03MB / 24.03MB 0.5s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.6601724Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 5.24MB / 64.40MB 0.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.6602924Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 0B / 211.46MB 0.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.8599351Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 15.73MB / 48.48MB 0.7s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.8600493Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 10.49MB / 64.40MB 0.7s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:39.9600559Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 18.87MB / 48.48MB 0.8s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.0614582Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 11.53MB / 211.46MB 0.9s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.2609269Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 25.17MB / 48.48MB 1.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.2610438Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 17.83MB / 64.40MB 1.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.4607233Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 22.02MB / 64.40MB 1.3s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.6602155Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 31.46MB / 48.48MB 1.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.6602912Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 32.51MB / 64.40MB 1.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.6603530Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 30.41MB / 211.46MB 1.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.7605331Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 34.60MB / 48.48MB 1.6s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.7606316Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 36.70MB / 64.40MB 1.6s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.9602365Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 40.89MB / 48.48MB 1.8s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:40.9603176Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 44.04MB / 64.40MB 1.8s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.1597639Z #10 sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 48.48MB / 48.48MB 2.0s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.1602571Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 53.48MB / 64.40MB 2.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.1603647Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 44.04MB / 211.46MB 2.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.1604705Z #10 sha256:e22be0bb0a025655d5cac399eafcec199d05f27c7fcb0c407e2dd98304be9c06 0B / 3.33kB 2.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.2598928Z #10 sha256:e22be0bb0a025655d5cac399eafcec199d05f27c7fcb0c407e2dd98304be9c06 3.33kB / 3.33kB 2.0s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.2600160Z #10 extracting sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.2601177Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 0B / 48.41MB 2.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.3765640Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 59.77MB / 64.40MB 2.2s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.4774312Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 4.19MB / 48.41MB 2.3s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.5815088Z #10 sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 64.40MB / 64.40MB 2.4s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.5816496Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 8.39MB / 48.41MB 2.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.5817691Z #10 sha256:edd83bf9d99ce4f8375fea4ce57c5651fba68ef1239159109ccde7f9f0aea61c 0B / 1.25MB 2.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.7597813Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 57.67MB / 211.46MB 2.6s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.7599240Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 15.73MB / 48.41MB 2.6s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.7600201Z #10 sha256:edd83bf9d99ce4f8375fea4ce57c5651fba68ef1239159109ccde7f9f0aea61c 1.25MB / 1.25MB 2.5s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.7601227Z #10 sha256:74890c3b106c2e9cf6132856e61c2377258978c5de3e8bb52af695bb1e43d119 448B / 448B 2.5s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:41.8604892Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 18.87MB / 48.41MB 2.7s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.0781679Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 25.17MB / 48.41MB 2.9s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.1845042Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 29.36MB / 48.41MB 3.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.2899886Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 71.30MB / 211.46MB 3.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.3964964Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 32.51MB / 48.41MB 3.2s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.6597146Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 39.85MB / 48.41MB 3.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.8597097Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 82.84MB / 211.46MB 3.7s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.8598500Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 42.99MB / 48.41MB 3.7s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:42.9599932Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 46.14MB / 48.41MB 3.8s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.0601557Z #10 extracting sha256:708274aafe49b02dddc66f97a5c45bb0b8fcf481ce6b43785b11f287fd4e4e1b 1.8s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.0602757Z #10 sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 48.41MB / 48.41MB 3.9s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.1611661Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 96.47MB / 211.46MB 4.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.1612800Z #10 extracting sha256:8cdff261ed5cee6fd4e729e68c2831a0abc6c7c017569ab45dfd2240bcc3712d
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.6146723Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 109.05MB / 211.46MB 4.4s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.8595822Z #10 extracting sha256:8cdff261ed5cee6fd4e729e68c2831a0abc6c7c017569ab45dfd2240bcc3712d 0.7s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:43.9596496Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 120.59MB / 211.46MB 4.8s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:44.6626359Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 138.41MB / 211.46MB 5.5s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:44.8139573Z #10 extracting sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:45.1535019Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 152.04MB / 211.46MB 5.9s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:45.8349658Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 164.63MB / 211.46MB 6.6s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.1595001Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 176.16MB / 211.46MB 7.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.4594967Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 187.70MB / 211.46MB 7.3s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8270538Z #10 ...
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8270827Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8271466Z #11 [runner 1/7] FROM docker.io/library/node:20-slim@sha256:9e70124bd00f47dd023e349cd587132ae61892acc0e47ed641416c3e18f401c3
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8272762Z #11 resolve docker.io/library/node:20-slim@sha256:9e70124bd00f47dd023e349cd587132ae61892acc0e47ed641416c3e18f401c3 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8274297Z #11 sha256:9e70124bd00f47dd023e349cd587132ae61892acc0e47ed641416c3e18f401c3 6.49kB / 6.49kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8275213Z #11 sha256:d08621e478133b0492bd661ceee5d13a22b8c55297f3dbbb57f1c15d0c214942 1.93kB / 1.93kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8275824Z #11 sha256:1fd0de62890fc2aa5a0a77f6554f1e88a5106d699cbb76aba5e49213f202935b 6.88kB / 6.88kB done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8276749Z #11 sha256:8e44f01296e3a6fdc31a671bee1c2259c5d5ee8b49f29aec42b5d2af15600296 28.23MB / 28.23MB 3.6s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8277705Z #11 sha256:77eb6456a5555288c8c6e1aca9b3f6f1b7cf6b913009649e631c6d4134119561 3.31kB / 3.31kB 3.6s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8278404Z #11 extracting sha256:8e44f01296e3a6fdc31a671bee1c2259c5d5ee8b49f29aec42b5d2af15600296 1.3s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8279021Z #11 sha256:e3e3f691659c2173b66f66f5ecad6e0186f2638e15ecad4a73171e0f70838de5 40.98MB / 40.98MB 5.5s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8279991Z #11 sha256:031e7c3606ae6509cf726973a0d2f762b7f821b5426849318678222d85ab228f 1.71MB / 1.71MB 4.0s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8280643Z #11 sha256:e6eecfc55be5f19d3b0967bb0ae0f53d17786b6a6ca7355d1ca3e9b97f77ca21 447B / 447B 4.1s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8281453Z #11 extracting sha256:77eb6456a5555288c8c6e1aca9b3f6f1b7cf6b913009649e631c6d4134119561 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8282151Z #11 extracting sha256:e3e3f691659c2173b66f66f5ecad6e0186f2638e15ecad4a73171e0f70838de5 1.3s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8282860Z #11 extracting sha256:031e7c3606ae6509cf726973a0d2f762b7f821b5426849318678222d85ab228f 0.0s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8283665Z #11 extracting sha256:e6eecfc55be5f19d3b0967bb0ae0f53d17786b6a6ca7355d1ca3e9b97f77ca21 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8284258Z #11 DONE 7.6s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8284424Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8284550Z #12 [runner 2/7] WORKDIR /app
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8284868Z #12 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8285021Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:46.8285557Z #10 [builder 1/7] FROM docker.io/library/node:20@sha256:ba36e9b2705008e63e354214f0e3011c528af9df2ca13ac2bd2c0114650302e6
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:47.1595241Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 200.28MB / 211.46MB 8.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:47.3599756Z #10 extracting sha256:078b2eece9b24f617524f986db4dd04f977e3e7d6fe15a9088a584147bc6ba05 2.6s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:47.7367117Z #10 extracting sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:47.8414756Z #10 sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 211.46MB / 211.46MB 8.5s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:52.7381332Z #10 extracting sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 5.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:52.8658087Z #10 extracting sha256:a1208d53eb0667932469017a5ef3960e5ed2aea9143d62b983abe2f8593eeb9a 5.1s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:54.1488704Z #10 extracting sha256:e22be0bb0a025655d5cac399eafcec199d05f27c7fcb0c407e2dd98304be9c06
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:54.2775645Z #10 extracting sha256:e22be0bb0a025655d5cac399eafcec199d05f27c7fcb0c407e2dd98304be9c06 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:54.2777937Z #10 extracting sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 0.1s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.0302160Z #10 extracting sha256:e27474c829da3b3769f88cd18e1915839bce5fa0e8b926452f27de2871814c2f 1.7s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.1084507Z #10 extracting sha256:edd83bf9d99ce4f8375fea4ce57c5651fba68ef1239159109ccde7f9f0aea61c
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2182237Z #10 extracting sha256:edd83bf9d99ce4f8375fea4ce57c5651fba68ef1239159109ccde7f9f0aea61c 0.0s done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2183755Z #10 extracting sha256:74890c3b106c2e9cf6132856e61c2377258978c5de3e8bb52af695bb1e43d119 done
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2184467Z #10 DONE 17.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2184640Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2184759Z #13 [builder 2/7] WORKDIR /app
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2185062Z #13 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2185223Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2185439Z #14 [builder 3/7] COPY package.json yarn.lock* .npmrc* ./
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.2185875Z #14 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.3802335Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.3803107Z #15 [builder 4/7] COPY packages ./packages
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.3803620Z #15 DONE 0.0s
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.3804301Z 
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.3804525Z #16 [builder 5/7] RUN yarn install --frozen-lockfile
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.5586475Z #16 0.329 yarn install v1.22.22
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:56.7706745Z #16 0.391 [1/4] Resolving packages...
+build-and-push-image	Build and push Docker image	2025-11-21T21:48:59.6871272Z #16 3.457 warning workspace-aggregator-f11de755-3949-464a-a668-66f9180a94d2 > backend > jest > @jest/core > @jest/transform > babel-plugin-istanbul > test-exclude > glob@7.2.3: Glob versions prior to v9 are no longer supported
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.0927761Z #16 3.863 warning workspace-aggregator-f11de755-3949-464a-a668-66f9180a94d2 > backend > jest > @jest/core > @jest/transform > babel-plugin-istanbul > test-exclude > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.4345464Z #16 4.205 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5122683Z #16 4.205 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5123839Z #16 ERROR: process "/bin/sh -c yarn install --frozen-lockfile" did not complete successfully: exit code: 1
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5124580Z ------
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5124917Z  > [builder 5/7] RUN yarn install --frozen-lockfile:
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5125344Z 0.329 yarn install v1.22.22
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5125669Z 0.391 [1/4] Resolving packages...
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5128240Z 3.457 warning workspace-aggregator-f11de755-3949-464a-a668-66f9180a94d2 > backend > jest > @jest/core > @jest/transform > babel-plugin-istanbul > test-exclude > glob@7.2.3: Glob versions prior to v9 are no longer supported
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5131028Z 3.863 warning workspace-aggregator-f11de755-3949-464a-a668-66f9180a94d2 > backend > jest > @jest/core > @jest/transform > babel-plugin-istanbul > test-exclude > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5133307Z 4.205 error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5133893Z 4.205 info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5134337Z ------
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5134505Z Dockerfile:11
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5134675Z --------------------
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5134863Z    9 |     
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5135063Z   10 |     # Install root dependencies and all workspaces
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5135356Z   11 | >>> RUN yarn install --frozen-lockfile
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5135583Z   12 |     
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5135745Z   13 |     # Build frontend
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5135931Z --------------------
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5136395Z ERROR: failed to build: failed to solve: process "/bin/sh -c yarn install --frozen-lockfile" did not complete successfully: exit code: 1
+build-and-push-image	Build and push Docker image	2025-11-21T21:49:00.5242440Z ##[error]buildx failed with: ERROR: failed to build: failed to solve: process "/bin/sh -c yarn install --frozen-lockfile" did not complete successfully: exit code: 1
