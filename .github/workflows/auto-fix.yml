@@ -24,29 +24,40 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Read the failure log and escape it properly for JSON
-          FAILURE_LOG=$(cat failure.log | jq -Rs .)
+          # Debug: Check if log file exists and has content
+          echo "Log file size: $(wc -l < failure.log) lines"
           
-          # Call GitHub Models API
-          curl https://models.inference.ai.azure.com/chat/completions \
-            -H "Content-Type: application/json" \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
-            -d '{
+          # Create properly formatted JSON payload using jq
+          jq -n \
+            --rawfile log failure.log \
+            '{
               "messages": [
                 {
                   "role": "system",
                   "content": "You are a helpful assistant that analyzes CI/CD failures and suggests fixes."
                 },
                 {
-                  "role": "user", 
-                  "content": "Analyze this GitHub Actions workflow failure and suggest specific fixes:\n\n'"$FAILURE_LOG"'"
+                  "role": "user",
+                  "content": ("Analyze this GitHub Actions workflow failure and suggest specific fixes:\n\n" + $log)
                 }
               ],
               "model": "gpt-4o"
-            }' > ai-response.json
+            }' > request.json
           
-          # Parse and display the response
-          cat ai-response.json | jq .
+          # Debug: Show first few lines of the request
+          echo "Request payload (first 500 chars):"
+          head -c 500 request.json
+          echo -e "\n..."
+    
+          # Call API
+          curl -v https://models.inference.ai.azure.com/chat/completions \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -d @request.json > ai-response.json 2>&1
+          
+          # Display response
+          echo "API Response:"
+          cat ai-response.json | jq . || cat ai-response.json
       
       - name: Apply fixes (manual step - add your logic)
         run: |
