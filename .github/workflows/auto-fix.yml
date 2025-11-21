@@ -28,22 +28,22 @@ jobs:
           FAILURE_LOG=$(cat failure.log)
           
           # Call GitHub Models API (requires GitHub Copilot subscription)
-          curl -X POST https://models.github.com/chat/completions \
-            -H "Authorization: Bearer $GITHUB_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "model": "gpt-4o",
-              "messages": [
-                {
-                  "role": "system",
-                  "content": "You are a helpful assistant that fixes CI/CD failures. Analyze the logs and suggest specific file changes."
-                },
-                {
-                  "role": "user",
-                  "content": "This GitHub Actions workflow failed with these logs:\n\n'"$FAILURE_LOG"'\n\nPlease suggest specific fixes."
-                }
-              ]
-            }' > ai-response.json
+              curl https://models.inference.ai.azure.com/chat/completions \
+                -H "Content-Type: application/json" \
+                -H "Authorization: Bearer $GITHUB_TOKEN" \
+                -d '{
+                  "messages": [
+                    {
+                      "role": "system",
+                      "content": "You are a helpful assistant."
+                    },
+                    {
+                      "role": "user", 
+                      "content": "Analyze this error and suggest a fix: '"$(cat failure.log)"'"
+                    }
+                  ],
+                  "model": "gpt-4o"
+                }' > ai-response.json
           
           # Parse response and extract suggestions
           cat ai-response.json
