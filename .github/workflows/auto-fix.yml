@@ -21,30 +21,36 @@ jobs:
         run: gh run view ${{ github.event.workflow_run.id }} --log-failed > failure.log
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
+
       - name: Analyze with GitHub Models API
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Truncate log to avoid token limits
-          tail -n 2000 failure.log > failure-truncated.log
+          # Extract only the error lines and last 100 lines of context
+          grep -i "error\|failed\|fatal" failure.log | tail -n 50 > errors.log
+          tail -n 100 failure.log >> errors.log
           
-          # Create JSON payload
+          # Further truncate to stay within token limits
+          tail -n 150 errors.log > failure-truncated.log
+          
+          echo "Truncated log size: $(wc -l < failure-truncated.log) lines"
+          
+          # Create JSON payload with smaller max_tokens
           jq -n \
             --rawfile log failure-truncated.log \
             '{
               "messages": [
                 {
                   "role": "system",
-                  "content": "You are a helpful assistant that analyzes CI/CD failures."
+                  "content": "You are a CI/CD expert. Analyze errors concisely and suggest fixes."
                 },
                 {
                   "role": "user",
-                  "content": ("Fix this workflow failure:\n\n" + $log)
+                  "content": ("Analyze and fix:\n\n" + $log)
                 }
               ],
-              "model": "gpt-4o",
-              "max_tokens": 2000
+              "model": "gpt-4o-mini",
+              "max_tokens": 1000
             }' > request.json
           
           # Call API
@@ -54,7 +60,8 @@ jobs:
             -d @request.json -o ai-response.json
           
           # Show response
-          jq . ai-response.json || cat ai-response.json
+          echo "API Response:"
+          jq -r '.choices[0].message.content // .' ai-response.json
       
       - name: Create PR with fix
         uses: peter-evans/create-pull-request@v5
